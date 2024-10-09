@@ -1,0 +1,7 @@
+issuer: https://token.actions.githubusercontent.com
+subject_pattern: repo:shyim/tanjun:ref:refs/tags/[0-9]+\.[0-9]+\.[0-9]+
+claim_pattern:
+  job_workflow_ref: shyim/tanjun/.github/workflows/release.yaml@refs/tags/[0-9]+\.[0-9]+\.[0-9]+
+
+permissions:
+  contents: write
