@@ -5,13 +5,13 @@
 class Tanjun < Formula
   desc "Simple Dockerized Deployment"
   homepage "https://shyim.me"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/shyim/tanjun/releases/download/0.0.8/tanjun_Darwin_x86_64.tar.gz"
-      sha256 "c1eae555a7ebed61cc54b44ba974aaefe9ddcbab45df2726d1d646dfaccbdf02"
+      url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Darwin_x86_64.tar.gz"
+      sha256 "6ded139c26fc1ae4267d865046d057bbf7c1ddbbfa51b3a2b1108a7ba70ff8fa"
 
       def install
         bin.install "tanjun"
@@ -21,8 +21,8 @@ class Tanjun < Formula
       end
     end
     on_arm do
-      url "https://github.com/shyim/tanjun/releases/download/0.0.8/tanjun_Darwin_arm64.tar.gz"
-      sha256 "ca196fc96684ac7b3e00a38c9c8daf5aa26a47fe0853aed9588eaa9fe550c752"
+      url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Darwin_arm64.tar.gz"
+      sha256 "bc38303576950eae6af3d0c85ecdecff6b2c1b1b40e5e3db628552e7e0ec3f26"
 
       def install
         bin.install "tanjun"
@@ -36,8 +36,8 @@ class Tanjun < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shyim/tanjun/releases/download/0.0.8/tanjun_Linux_x86_64.tar.gz"
-        sha256 "9d1b92c667dda84e7d42b504ff03ff7e071400f4fdccec78594c603f1b99f45b"
+        url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Linux_x86_64.tar.gz"
+        sha256 "a56b00d3971848347c25e444ac5390974859e56f0625f65bf366fc333409ae2e"
 
         def install
           bin.install "tanjun"
@@ -49,8 +49,8 @@ class Tanjun < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shyim/tanjun/releases/download/0.0.8/tanjun_Linux_arm64.tar.gz"
-        sha256 "8c06f8bfbe3c608da4adb3386f27b41b2b33e9e2c36d8ad496b2dd528fa9f405"
+        url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Linux_arm64.tar.gz"
+        sha256 "8b712081a2741062afab250b1d3ffeceb00d2102a681b96f7110ac335dd05225"
 
         def install
           bin.install "tanjun"
