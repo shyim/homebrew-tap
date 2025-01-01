@@ -5,13 +5,13 @@
 class Tanjun < Formula
   desc "Simple Dockerized Deployment"
   homepage "https://shyim.me"
-  version "0.0.9"
+  version "0.0.10"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Darwin_x86_64.tar.gz"
-      sha256 "6ded139c26fc1ae4267d865046d057bbf7c1ddbbfa51b3a2b1108a7ba70ff8fa"
+    if Hardware::CPU.intel?
+      url "https://github.com/shyim/tanjun/releases/download/0.0.10/tanjun_Darwin_x86_64.tar.gz"
+      sha256 "8a569ffd7eb95d8e011005c38dda91fa49b0e1d43a632c925ced8b99d82d990c"
 
       def install
         bin.install "tanjun"
@@ -20,9 +20,9 @@ class Tanjun < Formula
         fish_completion.install "completions/tanjun.fish"
       end
     end
-    on_arm do
-      url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Darwin_arm64.tar.gz"
-      sha256 "bc38303576950eae6af3d0c85ecdecff6b2c1b1b40e5e3db628552e7e0ec3f26"
+    if Hardware::CPU.arm?
+      url "https://github.com/shyim/tanjun/releases/download/0.0.10/tanjun_Darwin_arm64.tar.gz"
+      sha256 "76c735c26facf14e9169df974b21c1dd0fc4c034c218b0eeb664a5fdabfbbc9e"
 
       def install
         bin.install "tanjun"
@@ -34,10 +34,10 @@ class Tanjun < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Linux_x86_64.tar.gz"
-        sha256 "a56b00d3971848347c25e444ac5390974859e56f0625f65bf366fc333409ae2e"
+        url "https://github.com/shyim/tanjun/releases/download/0.0.10/tanjun_Linux_x86_64.tar.gz"
+        sha256 "339aa25dbeb784e373b05059bdae13b658aaf816b572628d744395a1757b2ccf"
 
         def install
           bin.install "tanjun"
@@ -47,10 +47,10 @@ class Tanjun < Formula
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shyim/tanjun/releases/download/0.0.9/tanjun_Linux_arm64.tar.gz"
-        sha256 "8b712081a2741062afab250b1d3ffeceb00d2102a681b96f7110ac335dd05225"
+        url "https://github.com/shyim/tanjun/releases/download/0.0.10/tanjun_Linux_arm64.tar.gz"
+        sha256 "a9b466ad035f7b583602947e7e39c5ffeb7525d091150312d391c5bfa6679824"
 
         def install
           bin.install "tanjun"
