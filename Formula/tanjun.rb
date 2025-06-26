@@ -5,13 +5,13 @@
 class Tanjun < Formula
   desc "Simple Dockerized Deployment"
   homepage "https://shyim.me"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shyim/tanjun/releases/download/0.1.0/tanjun_Darwin_x86_64.tar.gz"
-      sha256 "66042872c5a985f9a103c64b4dc306cc9a965c50a79bc39d495685a68d21eeeb"
+      url "https://github.com/shyim/tanjun/releases/download/0.1.1/tanjun_Darwin_x86_64.tar.gz"
+      sha256 "3d7862635963bcc35a6d3c4b4c7bc442ea66975695e6c840493f662c4a018d22"
 
       def install
         bin.install "tanjun"
@@ -21,8 +21,8 @@ class Tanjun < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shyim/tanjun/releases/download/0.1.0/tanjun_Darwin_arm64.tar.gz"
-      sha256 "cd5819ab69e900a11e36809537286cd34ed1c49edfc320d1ed5b422ed143c7e0"
+      url "https://github.com/shyim/tanjun/releases/download/0.1.1/tanjun_Darwin_arm64.tar.gz"
+      sha256 "31223edb40ba00d0eae159fccf28e24636c14f7ece0000e74f6e932fe871981c"
 
       def install
         bin.install "tanjun"
@@ -34,30 +34,24 @@ class Tanjun < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/shyim/tanjun/releases/download/0.1.0/tanjun_Linux_x86_64.tar.gz"
-        sha256 "e0516d0d2496560cb8bbcbbde6804ac5fd25420c6b4dbb0dde9902d52cb08807"
-
-        def install
-          bin.install "tanjun"
-          bash_completion.install "completions/tanjun.bash" => "_tanjun"
-          zsh_completion.install "completions/tanjun.zsh" => "_tanjun"
-          fish_completion.install "completions/tanjun.fish"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/shyim/tanjun/releases/download/0.1.1/tanjun_Linux_x86_64.tar.gz"
+      sha256 "01d8c4448909302277214e776bf168deae3819a0adfe50b280993524215c9cb3"
+      def install
+        bin.install "tanjun"
+        bash_completion.install "completions/tanjun.bash" => "_tanjun"
+        zsh_completion.install "completions/tanjun.zsh" => "_tanjun"
+        fish_completion.install "completions/tanjun.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/shyim/tanjun/releases/download/0.1.0/tanjun_Linux_arm64.tar.gz"
-        sha256 "97a02c47dac364d710218f8c3a5926b4c473eba621b194763908fc6faef593fb"
-
-        def install
-          bin.install "tanjun"
-          bash_completion.install "completions/tanjun.bash" => "_tanjun"
-          zsh_completion.install "completions/tanjun.zsh" => "_tanjun"
-          fish_completion.install "completions/tanjun.fish"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/shyim/tanjun/releases/download/0.1.1/tanjun_Linux_arm64.tar.gz"
+      sha256 "185003ea8a8612dc2c9f55ed22a2531776385ca5e930163197b3881126f96ab5"
+      def install
+        bin.install "tanjun"
+        bash_completion.install "completions/tanjun.bash" => "_tanjun"
+        zsh_completion.install "completions/tanjun.zsh" => "_tanjun"
+        fish_completion.install "completions/tanjun.fish"
       end
     end
   end
