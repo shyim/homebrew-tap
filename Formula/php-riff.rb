@@ -5,7 +5,7 @@
 class PhpRiff < Formula
   desc "Fast, standalone Composer-compatible package manager"
   homepage "https://github.com/shyim/riff"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   depends_on "php"
@@ -14,25 +14,25 @@ class PhpRiff < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/shyim/riff/releases/download/v0.0.5/riff-v0.0.5-aarch64-apple-darwin.tar.gz"
-      sha256 "27ca6c0ddf626103a4b2349b11585983d690534a8b8c86629b16196f0cb27332"
+      url "https://github.com/shyim/riff/releases/download/v0.0.6/riff-v0.0.6-aarch64-apple-darwin.tar.gz"
+      sha256 "5c72969fa9e487181f97c10dc427f0d8b8ed0655a92d331acee08073d7658cb5"
     end
 
     on_intel do
-      url "https://github.com/shyim/riff/releases/download/v0.0.5/riff-v0.0.5-x86_64-apple-darwin.tar.gz"
-      sha256 "a0b50c73207255e4b8e95aacdefb7c2357023d2c8c92222408c479a04f5df397"
+      url "https://github.com/shyim/riff/releases/download/v0.0.6/riff-v0.0.6-x86_64-apple-darwin.tar.gz"
+      sha256 "f983545b896eee3182a19f8908a7f0fec4674cf2242a7866b50ad06601f1986b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/shyim/riff/releases/download/v0.0.5/riff-v0.0.5-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "3072447a06698457e4ec43c0d2a4ec5c36f5f8586ad175f96d77d599fd604ff2"
+      url "https://github.com/shyim/riff/releases/download/v0.0.6/riff-v0.0.6-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "111ec501def6ef2203ca6ff920f22c34fca95553a33d511b0e52534868f533a5"
     end
 
     on_intel do
-      url "https://github.com/shyim/riff/releases/download/v0.0.5/riff-v0.0.5-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f0457c1a7e506b38b136a59be6cb00f4bea66127b63ba6d9c011178b03e71956"
+      url "https://github.com/shyim/riff/releases/download/v0.0.6/riff-v0.0.6-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cf4ef60763cce9d5455f31244b077cd288e5b63081e5cd42bfdde10171536b5e"
     end
   end
 
